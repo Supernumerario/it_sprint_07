@@ -12,12 +12,12 @@ export default function Panell(params) {
     return (
         <StyledContainer>
             <div>
-                <label for="webPagesId">Número de pàgines: </label>
-                <InputNumeric type="number" min="0" value="1" id="webPagesId" name="webPages" handleChange={params.handleChange} />
+                <label htmlFor="webPagesId">Número de pàgines: </label>
+                <InputNumeric type="number" min="1" value={params.value.webPages} id="webPagesId" name="webPages" handleChange={params.handleChange} />
             </div>
             <div>
-                <label for="webLanguagesId">Número d'idiomes: </label>
-                <InputNumeric type="number" min="0" value="1" id="webLanguagesId" name="webLanguages" handleChange={params.handleChange} />
+                <label htmlFor="webLanguagesId">Número d'idiomes: </label>
+                <InputNumeric type="number" min="1" value={params.value.webLanguages} id="webLanguagesId" name="webLanguages" handleChange={params.handleChange} />
             </div>
         </StyledContainer>
     );

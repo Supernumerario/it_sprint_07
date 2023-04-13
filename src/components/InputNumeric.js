@@ -13,13 +13,11 @@ export default function InputNumeric(params) {
         let value = Number(inputValue);
         event.preventDefault();
         if (event.target.name === 'decrease') {
-            if (value > 0) {
-                console.log('Decrease');
+            if (value > 1) {
                 setInputValue(value - 1);
                 params.handleChange(params.name, value - 1);
             }
         } else {
-            console.log('Increase');
             setInputValue(value + 1);
             params.handleChange(params.name, value + 1);
         }
